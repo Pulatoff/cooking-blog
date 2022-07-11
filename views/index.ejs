@@ -24,38 +24,16 @@
 
 <!-- Category Start -->
 
-<div class="category">
+<div class="category__page">
+  <% if(category != ''){ %> <% category.forEach((category,index)=>{ %>
   <a href="#" class="category__link">
     <div class="category__img">
-      <img src="/img/american-food.jpg" />
+      <img src="/img/<%- category.img %>" alt="<%- category.name %>" />
     </div>
-    <div>American food</div>
+    <div><%- category.name%></div>
   </a>
-  <a href="#" class="category__link">
-    <div class="category__img">
-      <img src="/img/american-food.jpg" />
-    </div>
-    <div>American food</div>
-  </a>
-  <a href="#" class="category__link">
-    <div class="category__img">
-      <img src="/img/american-food.jpg" />
-    </div>
-    <div>American food</div>
-  </a>
-  <a href="#" class="category__link">
-    <div class="category__img">
-      <img src="/img/american-food.jpg" />
-    </div>
-    <div>American food</div>
-  </a>
-  <a href="#" class="category__link">
-    <div class="category__img">
-      <img src="/img/american-food.jpg" />
-    </div>
-    <div>American food</div>
-  </a>
-  <a href="#" class="category__link">
+  <% })%> <% }%>
+  <a href="/category" class="category__link">
     <div class="category__img">
       <img src="/img/view-all.jpg" />
     </div>

@@ -1,0 +1,16 @@
+<h1>Explore Categories</h1>
+<ul class="road">
+  <li><a href="/">Home/</a></li>
+  <li>Category</li>
+</ul>
+
+<div class="category__page">
+  <% if(category != ''){ %> <% category.forEach((category,index)=>{ %>
+  <a href="#" class="category__link">
+    <div class="category__img">
+      <img src="/img/<%- category.img %>" alt="<%- category.name %>" />
+    </div>
+    <div><%- category.name%></div>
+  </a>
+  <% })%> <% }%>
+</div>
