@@ -12,3 +12,4 @@ db.once("open", function () {
 });
 
 require("./Categories");
+require("./Recipe");

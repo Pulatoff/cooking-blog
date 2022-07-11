@@ -1,6 +1,6 @@
 require("../models/database");
 const Category = require("../models/Categories");
-
+const Recipe = require("../models/Recipe");
 exports.homepage = async (req, res) => {
   try {
     const category = await Category.find({}).limit(5);
