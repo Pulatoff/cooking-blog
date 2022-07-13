@@ -1,16 +1,31 @@
 <h1>Explore Categories</h1>
 <ul class="road">
   <li><a href="/">Home/</a></li>
-  <li>Category</li>
+  <li><a href="/category">Category/</a></li>
+  <li>Explore Categories</li>
 </ul>
 
 <div class="category__page">
-  <% if(category != ''){ %> <% category.forEach((category,index)=>{ %>
-  <a href="#" class="category__link">
+  <% if(typeof category !=='undefined'&& category.length>0){ %>
+  <!--  -->
+  <%category.forEach((category,index)=>{ %>
+  <a href="category/<%=category.name %>" class="category__link">
     <div class="category__img">
       <img src="/img/<%- category.img %>" alt="<%- category.name %>" />
     </div>
     <div><%- category.name%></div>
   </a>
   <% })%> <% }%>
+</div>
+<div class="explore">
+  <%if (typeof categoryById !=='undefined'){ %>
+  <!--  -->
+  <%categoryById.forEach((recipe,index)=>{ %>
+  <a href="/recipe/<%=recipe._id%>" class="category__link">
+    <div class="category__img category__img--large">
+      <img src="<%= recipe.image%>" alt="<%recipe.name%>" />
+    </div>
+    <div><%= recipe.name%></div>
+  </a>
+  <% })} %>
 </div>

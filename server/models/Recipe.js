@@ -22,10 +22,11 @@ const Schema = new mongoose.Schema({
     enum: ["American", "Indian", "Thai", "Mexican", "Chinese"],
     required: true,
   },
-  img: {
+  image: {
     type: String,
     required: true,
   },
 });
 
+Schema.index({ name: "text", description: "text" });
 module.exports = mongoose.model("Recipe", Schema);

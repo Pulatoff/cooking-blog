@@ -1,0 +1,12 @@
+<h1>Search Results</h1>
+
+<div class="explore">
+  <%if (recipe !==''){ %> <% recipe.forEach((recipe,index)=>{ %>
+  <a href="/recipe/<%=recipe._id%>" class="category__link">
+    <div class="category__img category__img--large">
+      <img src="<%= recipe.image%>" alt="<%recipe.name%>" />
+    </div>
+    <div><%= recipe.name%></div>
+  </a>
+  <% })} %>
+</div>

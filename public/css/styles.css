@@ -148,6 +148,9 @@ li {
 .category__img--large {
   height: 330px;
 }
+.category__img--large img {
+  object-fit: cover;
+}
 
 .explore {
   display: grid;
@@ -167,8 +170,9 @@ li {
 }
 
 .category__page {
+  margin-bottom: 60px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 
@@ -183,4 +187,18 @@ li {
 .road li {
   font-size: 20px;
   color: #999;
+}
+
+.recipe__page {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 2fr;
+}
+
+.recipe__img img {
+  width: 100%;
+}
+
+.recipe-bottom {
+  margin-bottom: 20px;
 }

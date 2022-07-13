@@ -51,40 +51,81 @@
     <a href="/explore-latest">View more</a>
   </div>
   <div class="explore">
-    <a href="#" class="category__link">
+    <%if (food.latest !==''){ %> <% food.latest.forEach((recipe,index)=>{ %>
+    <a href="/recipe/<%=recipe._id%>" class="category__link">
       <div class="category__img category__img--large">
-        <img src="/img/chocolate-banoffe-whoopie-pies.jpg" />
+        <img src="<%= recipe.image%>" alt="<%recipe.name%>" />
       </div>
-      <div>American food</div>
+      <div><%= recipe.name%></div>
     </a>
-    <a href="#" class="category__link">
-      <div class="category__img category__img--large">
-        <img src="/img/chocolate-banoffe-whoopie-pies.jpg" />
-      </div>
-      <div>American food</div>
-    </a>
-    <a href="#" class="category__link">
-      <div class="category__img category__img--large">
-        <img src="/img/chocolate-banoffe-whoopie-pies.jpg" />
-      </div>
-      <div>American food</div>
-    </a>
-    <a href="#" class="category__link">
-      <div class="category__img category__img--large">
-        <img src="/img/chocolate-banoffe-whoopie-pies.jpg" />
-      </div>
-      <div>American food</div>
-    </a>
-    <a href="#" class="category__link">
-      <div class="category__img category__img--large">
-        <img src="/img/chocolate-banoffe-whoopie-pies.jpg" />
-      </div>
-      <div>American food</div>
-    </a>
+    <% })} %>
   </div>
 </section>
 
 <!-- Latest end-->
+
+<!-- American start-->
+
+<section>
+  <div class="title">
+    <h2>American recipes</h2>
+    <a href="/catecory/american">View more</a>
+  </div>
+  <div class="explore">
+    <%if (food.american !==''){ %> <% food.american.forEach((recipe,index)=>{ %>
+    <a href="/recipe/<%=recipe._id%>" class="category__link">
+      <div class="category__img category__img--large">
+        <img src="<%= recipe.image%>" alt="<%recipe.name%>" />
+      </div>
+      <div><%= recipe.name%></div>
+    </a>
+    <% })} %>
+  </div>
+</section>
+
+<!-- American end-->
+
+<!-- Thai start-->
+
+<section>
+  <div class="title">
+    <h2>Thai recipes</h2>
+    <a href="/category/thai">View more</a>
+  </div>
+  <div class="explore">
+    <%if (food.thai !==''){ %> <% food.thai.forEach((recipe,index)=>{ %>
+    <a href="/recipe/<%=recipe._id%>" class="category__link">
+      <div class="category__img category__img--large">
+        <img src="<%= recipe.image%>" alt="<%recipe.name%>" />
+      </div>
+      <div><%= recipe.name%></div>
+    </a>
+    <% })} %>
+  </div>
+</section>
+
+<!-- Thai end-->
+
+<!-- Chinese start-->
+
+<section>
+  <div class="title">
+    <h2>Chinese recipes</h2>
+    <a href="/category/chinese">View more</a>
+  </div>
+  <div class="explore">
+    <%if (food.chinese !==''){ %> <% food.chinese.forEach((recipe,index)=>{ %>
+    <a href="/recipe/<%=recipe._id%>" class="category__link">
+      <div class="category__img category__img--large">
+        <img src="<%= recipe.image%>" alt="<%recipe.name%>" />
+      </div>
+      <div><%= recipe.name%></div>
+    </a>
+    <% })} %>
+  </div>
+</section>
+
+<!-- Chinese end-->
 
 <!-- Submit start -->
 <section class="submit">
